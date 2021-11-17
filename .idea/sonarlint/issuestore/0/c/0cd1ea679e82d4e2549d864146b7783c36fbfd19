@@ -1,0 +1,10 @@
+
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(Ô¬úÿÿÿÿ
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(È­¤¶
+w
+java:S1488P"aImmediately return this expression instead of assigning it to the temporary variable "margarita".(ŞË­×
+y
+java:S1488_"cImmediately return this expression instead of assigning it to the temporary variable "peperoniOli".(Í¢íÁ
+y
+java:S1488o"cImmediately return this expression instead of assigning it to the temporary variable "peperoniOli".(Í¢íÁ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“¢ùôÿÿÿÿÿ
