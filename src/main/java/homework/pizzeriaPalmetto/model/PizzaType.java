@@ -1,11 +1,11 @@
-package homework.pizzeriaPalmetto.model;
+package pizzeriaPalmetto.model;
 
 public enum PizzaType {
     REGULAR("Base", 1),
     CLOSED("Calzone", 1.5);
 
     private final String name;
-    private final double price;
+    private  final double price;
 
     PizzaType(String name, double price) {
         this.name = name;
@@ -15,7 +15,6 @@ public enum PizzaType {
     public String getName() {
         return this.name;
     }
-
     public double getPrice() {
         return this.price;
     }

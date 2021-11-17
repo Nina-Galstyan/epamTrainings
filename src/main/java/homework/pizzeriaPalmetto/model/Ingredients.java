@@ -1,4 +1,4 @@
-package homework.pizzeriaPalmetto.model;
+package pizzeriaPalmetto.model;
 
 public enum Ingredients {
     TOMATO(1),

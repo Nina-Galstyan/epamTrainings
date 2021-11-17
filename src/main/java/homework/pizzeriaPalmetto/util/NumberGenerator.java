@@ -1,4 +1,4 @@
-package homework.pizzeriaPalmetto.util;
+package pizzeriaPalmetto.util;
 
 import java.util.Random;
 

@@ -1,39 +1,33 @@
-package homework.pizzeriaPalmetto;
+package pizzeriaPalmetto;
 
-import homework.pizzeriaPalmetto.exception.NotFoundException;
-import homework.pizzeriaPalmetto.model.Order;
-import homework.pizzeriaPalmetto.model.Pizza;
-import homework.pizzeriaPalmetto.storage.storageImpl.OrderStorageImpl;
-import homework.pizzeriaPalmetto.storage.storageImpl.PizzaStorageImpl;
 
+
+import pizzeriaPalmetto.model.Ingredients;
+import pizzeriaPalmetto.model.Pizza;
+import pizzeriaPalmetto.model.PizzaType;
+import pizzeriaPalmetto.storage.OrderStorage;
+import pizzeriaPalmetto.storage.PizzaStorage;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pizzeria {
-    private static OrderStorageImpl orderStorage = new OrderStorageImpl();
-    private static PizzaStorageImpl pizzaStorage = new PizzaStorageImpl();
+    public static void main(String[] args) {
+        PizzaStorage pizzaStorage = new PizzaStorage();
+        OrderStorage orderStorage = new OrderStorage();
 
-    public static void main(String[] args) throws NotFoundException {
-
-//    Implement method a main(). In it, implement and withdraw the following orders:
-//            •	Customer number 7717 wants to order 2 pcs. "Margarita" and 3 pcs. the usual "PepperoniOro".
-//            •	Customer with number 4372 wants to order delivery of 12 pcs. usual pizzas "BasePZZ".
-
-        Order byNumber7717 = orderStorage.getByCustomerNumber(7717);
-        Pizza margarita = pizzaStorage.addMargarita();
-        margarita.setQuantity(2);
-        List<Pizza> pizzaList = byNumber7717.getPizzaList();
-        pizzaList.add(margarita);
-        Pizza pepperoniOro = pizzaStorage.addPepperoniOro();
-        pepperoniOro.setQuantity(3);
-        pizzaList.add(pepperoniOro);
-
-
-        Order byNumber4372 = orderStorage.getByCustomerNumber(4372);
-        Pizza BasePZZ = pizzaStorage.addBasePZZ();
-        margarita.setQuantity(12);
-        List<Pizza> pizzaList2 = byNumber4372.getPizzaList();
-        pizzaList.add(margarita);
-
-
+//       . Fill the Margarita pizza with the following ingredients: tomato paste, pepper, garlic, and bacon.
+//          Fill another pizza with tomato paste, cheese, salami, olives.
+        List<Ingredients> ingredientsForMargarita = new ArrayList<>();
+        ingredientsForMargarita.add(0, Ingredients.TOMATO);
+        ingredientsForMargarita.add(1, Ingredients.PEPPERONI);
+        ingredientsForMargarita.add(2, Ingredients.GARLIC);
+        ingredientsForMargarita.add(3, Ingredients.BACON);
+        Pizza pizza = new Pizza();
+        pizza.setName("Margarita");
+        pizza.setIngredients(ingredientsForMargarita);
+        pizza.setPizzaType(PizzaType.REGULAR);
+        pizzaStorage.addPizza(pizza);
     }
+
 }

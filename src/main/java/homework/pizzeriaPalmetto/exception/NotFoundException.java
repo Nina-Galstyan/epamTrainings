@@ -1,4 +1,4 @@
-package homework.pizzeriaPalmetto.exception;
+package pizzeriaPalmetto.exception;
 
 public class NotFoundException  extends Exception {
     public NotFoundException(String message) {

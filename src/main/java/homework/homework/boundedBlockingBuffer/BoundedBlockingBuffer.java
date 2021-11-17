@@ -1,4 +1,4 @@
-package boundedBlockingBuffer;
+package homework.boundedBlockingBuffer;
 
 public class BoundedBlockingBuffer<T> {
     private T data;
